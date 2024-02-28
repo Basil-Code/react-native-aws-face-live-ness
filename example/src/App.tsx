@@ -6,7 +6,7 @@ import { AwsFaceLiveNessView } from 'react-native-aws-face-live-ness';
 export default function App() {
   return (
     <View style={styles.container}>
-      <AwsFaceLiveNessView color="#32a852" style={styles.box} />
+      <AwsFaceLiveNessView sessionId="#32a852"  />
     </View>
   );
 }

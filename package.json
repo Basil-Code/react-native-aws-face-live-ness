@@ -156,5 +156,11 @@
         }
       ]
     ]
+  },
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "react-native-aws-face-live-ness": "^0.1.0"
   }
 }
