@@ -1,6 +1,6 @@
 {
   "name": "react-native-aws-face-live-ness",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper Aws FaceLiveNess",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -59,6 +59,7 @@
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.44",
+    "aws-amplify": "^6.0.18",
     "commitlint": "^17.0.2",
     "del-cli": "^5.1.0",
     "eslint": "^8.51.0",
@@ -161,6 +162,6 @@
     "example": "example"
   },
   "dependencies": {
-    "react-native-aws-face-live-ness": "^1.0.1"
+    "react-native-aws-face-live-ness": "^1.0.2"
   }
 }
