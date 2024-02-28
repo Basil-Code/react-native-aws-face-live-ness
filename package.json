@@ -1,6 +1,6 @@
 {
   "name": "react-native-aws-face-live-ness",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper Aws FaceLiveNess",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -161,6 +161,6 @@
     "example": "example"
   },
   "dependencies": {
-    "react-native-aws-face-live-ness": "^0.1.0"
+    "react-native-aws-face-live-ness": "^1.0.1"
   }
 }

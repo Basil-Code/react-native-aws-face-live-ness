@@ -2,6 +2,8 @@ package com.awsfaceliveness;
 
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
@@ -26,9 +28,9 @@ public class AwsFaceLiveNessViewManager extends SimpleViewManager<View> {
     return new FaceLiveNessView(themedReactContext);
   }
 
-//  @ReactProp(name = "sessionId")
-//  @NonNull
-//  public void setSessionId(FaceLiveNessView view, String sessionId) {
-//    view.setSessionId(sessionId);
-//  }
+  @ReactProp(name = "sessionId")
+  @NonNull
+  public void setSessionId(FaceLiveNessView view, String sessionId) {
+    view.setSessionId(sessionId);
+  }
 }
