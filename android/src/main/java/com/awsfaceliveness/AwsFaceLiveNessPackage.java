@@ -16,6 +16,6 @@ public class AwsFaceLiveNessPackage implements ReactPackage {
 
   @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-    return Arrays.<ViewManager>asList(new AwsFaceLiveNessViewManager(reactContext));
+    return Arrays.<ViewManager>asList(new AwsFaceLiveNessComposeManger(reactContext));
   }
 }

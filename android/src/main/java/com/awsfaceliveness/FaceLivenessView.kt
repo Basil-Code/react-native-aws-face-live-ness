@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.AbstractComposeView
 import com.amplifyframework.ui.liveness.ui.FaceLivenessDetector
@@ -18,6 +19,7 @@ class FaceLiveNessView @JvmOverloads constructor(
     private var mSessionId: String = ""
 
     fun setSessionId(sessionId: String) {
+      Log.i("SetSessionId", sessionId)
       mSessionId = sessionId
     }
     @Composable
@@ -25,21 +27,22 @@ class FaceLiveNessView @JvmOverloads constructor(
       MaterialTheme(
         colorScheme = LivenessColorScheme.default()
       ) {
-        FaceLivenessDetector(
-          sessionId = mSessionId,
-          region = "ap-northeast-1",
-          onComplete = {
-            Log.i("MyApp", "Face Liveness flow is complete")
-            // The Face Liveness flow is complete and the
-            // session results are ready. Use your backend to
-            // retrieve the results for the Face Liveness session.
-          },
-          onError = { error ->
-            // Log.e("MyApp", "Error during Face Liveness flow", error)
-            // An error occurred during the Face Liveness flow, such
-            // as time out or missing the required permissions.
-          }
-        )
+        Text(mSessionId)
+//        FaceLivenessDetector(
+//          sessionId = mSessionId,
+//          region = "ap-northeast-1",
+//          onComplete = {
+//            Log.i("MyApp", "Face Liveness flow is complete")
+//            // The Face Liveness flow is complete and the
+//            // session results are ready. Use your backend to
+//            // retrieve the results for the Face Liveness session.
+//          },
+//          onError = { error ->
+//            // Log.e("MyApp", "Error during Face Liveness flow", error)
+//            // An error occurred during the Face Liveness flow, such
+//            // as time out or missing the required permissions.
+//          }
+//        )
       }
     }
 }
