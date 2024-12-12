@@ -8,7 +8,7 @@ buildscript {
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:7.2.1"
+    classpath "com.android.tools.build:gradle:8.7.3"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
@@ -96,7 +96,7 @@ dependencies {
      implementation 'androidx.activity:activity-compose:1.7.2'
      implementation 'com.facebook.android:facebook-android-sdk:latest.release'
 
-     implementation("com.facebook.react:react-android:0.72.3")
+     implementation("com.facebook.react:react-android:0.76.3")
   // FaceLivenessDetector dependency
      implementation 'com.amplifyframework.ui:liveness:1.1.5'
 
