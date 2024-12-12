@@ -27,22 +27,22 @@ class FaceLiveNessView @JvmOverloads constructor(
       MaterialTheme(
         colorScheme = LivenessColorScheme.default()
       ) {
-        Text(mSessionId)
-//        FaceLivenessDetector(
-//          sessionId = mSessionId,
-//          region = "ap-northeast-1",
-//          onComplete = {
-//            Log.i("MyApp", "Face Liveness flow is complete")
-//            // The Face Liveness flow is complete and the
-//            // session results are ready. Use your backend to
-//            // retrieve the results for the Face Liveness session.
-//          },
-//          onError = { error ->
-//            // Log.e("MyApp", "Error during Face Liveness flow", error)
-//            // An error occurred during the Face Liveness flow, such
-//            // as time out or missing the required permissions.
-//          }
-//        )
+//        Text(mSessionId)
+        FaceLivenessDetector(
+          sessionId = mSessionId,
+          region = "ap-northeast-1",
+          onComplete = {
+            Log.i("MyApp", "Face Liveness flow is complete")
+            // The Face Liveness flow is complete and the
+            // session results are ready. Use your backend to
+            // retrieve the results for the Face Liveness session.
+          },
+          onError = { error ->
+             Log.e("MyApp", "Error during Face Liveness flow", error)
+            // An error occurred during the Face Liveness flow, such
+            // as time out or missing the required permissions.
+          }
+        )
       }
     }
 }

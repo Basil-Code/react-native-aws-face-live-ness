@@ -3,8 +3,9 @@ import {
   UIManager,
   Platform, findNodeHandle,
   type ViewProps,
+  View,
 } from 'react-native';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type MutableRefObject } from 'react';
 
 const LINKING_ERROR =
   `The package 'react-native-aws-face-live-ness' doesn't seem to be linked. Make sure: \n\n` +
@@ -14,6 +15,8 @@ const LINKING_ERROR =
 
 interface AwsFaceLiveNessProps extends ViewProps {
   sessionId: string;
+  ref?: MutableRefObject<any>;
+
 }
 
 const ComponentName = 'AwsFaceLiveNessComposeManger';
@@ -31,7 +34,7 @@ const createFragment = (viewId: any) => {
     [viewId],
   );
 };
-const AwsFaceLiveNessCompose = () => {
+const AwsFaceLiveNess = (props: AwsFaceLiveNessProps) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -46,17 +49,16 @@ const AwsFaceLiveNessCompose = () => {
   }, []);
 
   return (
-    // TODO: Fix this type mismatch
-    // @ts-ignore
-    <AwsFaceLiveNessComposeManger
-      style={{
-        width: 200,
-        height: 200,
-      }}
-      // TODO: Fix this type mismatch
-      // @ts-ignore
-      ref={ref}
-    />
+    <View style={{flex: 1}}>
+      <AwsFaceLiveNessComposeManger
+        style={{
+          width: 200,
+          height: 200,
+        }}
+        sessionId={props.sessionId ?? ''}
+        ref={ref}
+      />
+    </View>
   );
 };
-export {AwsFaceLiveNessCompose}
+export default AwsFaceLiveNess
