@@ -38,7 +38,7 @@ class FaceLiveNessView @JvmOverloads constructor(
             // retrieve the results for the Face Liveness session.
           },
           onError = { error ->
-             Log.e("MyApp", "Error during Face Liveness flow", error)
+             Log.e("MyApp", "Error during Face Liveness flow", error.throwable)
             // An error occurred during the Face Liveness flow, such
             // as time out or missing the required permissions.
           }
